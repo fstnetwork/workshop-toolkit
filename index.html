@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Workshop Toolkit</title>
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <br />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column column-33">
+          <form>
+            <fieldset>
+              <label for="endpoint">API Endpoint</label>
+              <input
+                type="text"
+                placeholder="http(s)://api.... not includes /api"
+                id="endpoint"
+              />
+              <label for="signin-id">Sign-In ID</label>
+              <input type="text" placeholder="id" id="signin-id" />
+              <label for="signin-pw">Sign-In Password</label>
+              <input type="password" placeholder="password" id="signin-pw" />
+              <label for="ethk-pp">EthereumKey Passphrase</label>
+              <input type="password" placeholder="passphrase" id="ethk-pp" />
+            </fieldset>
+          </form>
+        </div>
+        <div class="column">
+          <label for="address">Address</label>
+          <input type="text" placeholder="0x....." id="address" readonly />
+          <label for="mutation-resp">ABI Encoding (Mutation response)</label>
+          <textarea
+            rows="100"
+            placeholder="please paste the responded json here"
+            id="mutation-resp"
+            style="height: 20.5rem;"
+          ></textarea>
+          <button id="submit-transaction" class="float-right">
+            Submit Transaction
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <label for="txhash">Transaction Hash</label>
+          <input type="text" id="txhash" readonly />
+          <button id="check-txhash" class="float-right">
+            Check on Blockchain Explorer
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/eth-key-lib-js-browser.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bacon.js/3.0.9/Bacon.js"></script>
+    <script src="./lib/my.js"></script>
+  </body>
+</html>
