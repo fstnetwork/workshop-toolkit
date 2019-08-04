@@ -1,0 +1,31 @@
+{
+  "name": "workshop-toolkit",
+  "version": "0.0.1",
+  "description": "A workshop toolkit web for smoothening the experiences in using FST Engine API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "uglify-js": "^3.6.0"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./lib/workshop.v2.js --out-file ./lib/workshop.v2.tmp.js && uglifyjs ./lib/workshop.v2.tmp.js --compress -o ./lib/workshop.v2.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fstnetwork/workshop-toolkit.git"
+  },
+  "author": "FST NETWORK PTE. LTD.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fstnetwork/workshop-toolkit/issues"
+  },
+  "homepage": "https://github.com/fstnetwork/workshop-toolkit#readme"
+}
