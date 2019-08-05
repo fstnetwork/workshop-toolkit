@@ -50,17 +50,17 @@
         <div class="column column-33">
           <form>
             <fieldset>
-              <label for="endpoint">API Endpoint</label>
+              <label for="endpoint">1. API Endpoint</label>
               <input
                 type="text"
                 placeholder="http(s)://api.*.workshop.fst.network"
                 id="endpoint"
               />
-              <label for="signin-id">Sign-In ID</label>
+              <label for="signin-id">2. Sign-In ID</label>
               <input type="text" placeholder="id" id="signin-id" />
-              <label for="signin-pw">Sign-In Password</label>
+              <label for="signin-pw">3. Sign-In Password</label>
               <input type="text" placeholder="password" id="signin-pw" />
-              <label for="ethk-pp">EthereumKey Passphrase</label>
+              <label for="ethk-pp">4. EthereumKey Passphrase</label>
               <input type="text" placeholder="passphrase" id="ethk-pp" />
             </fieldset>
           </form>
@@ -70,7 +70,7 @@
             >Address (click to check it on Blockchain Explorer)</label
           >
           <input type="text" placeholder="0x....." id="address" readonly />
-          <label for="mutation-resp">ABI Encoding (Mutation response)</label>
+          <label for="mutation-resp">5. ABI Encoding (Mutation response)</label>
           <textarea
             rows="100"
             placeholder="please paste the responded json here"
@@ -78,7 +78,7 @@
             style="height: 19.5rem; font-family: monospace;"
           ></textarea>
           <button id="submit-transaction" class="float-right" disabled>
-            Decrypt Key and Submit Transaction
+            6. Decrypt Key and Submit Transaction
           </button>
         </div>
       </div>
@@ -87,7 +87,7 @@
           <label for="txhash">Transaction Hash</label>
           <input type="text" id="txhash" placeholder="0x....." readonly />
           <button id="check-txhash" class="float-right" disabled>
-            Check on Blockchain Explorer
+            7. Check on Blockchain Explorer
           </button>
         </div>
       </div>
