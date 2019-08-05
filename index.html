@@ -50,7 +50,7 @@
         <div class="column column-33">
           <form>
             <fieldset>
-              <label for="endpoint">1. API Endpoint</label>
+              <label for="endpoint">1. API Endpoint (not including /api)</label>
               <input
                 type="text"
                 placeholder="http(s)://api.*.workshop.fst.network"
@@ -67,9 +67,15 @@
         </div>
         <div class="column">
           <label for="address"
-            >Address (click to check it on Blockchain Explorer)</label
+            >7. Address (click to check it on Blockchain Explorer)</label
           >
-          <input type="text" placeholder="0x....." id="address" readonly />
+          <input
+            type="text"
+            style="cursor: pointer"
+            placeholder="0x....."
+            id="address"
+            readonly
+          />
           <label for="mutation-resp">5. ABI Encoding (Mutation response)</label>
           <textarea
             rows="100"
@@ -87,7 +93,7 @@
           <label for="txhash">Transaction Hash</label>
           <input type="text" id="txhash" placeholder="0x....." readonly />
           <button id="check-txhash" class="float-right" disabled>
-            7. Check on Blockchain Explorer
+            8. Check on Blockchain Explorer
           </button>
         </div>
       </div>
