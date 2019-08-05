@@ -21,6 +21,9 @@
       .bad-form {
         border: 0.2rem solid #ff8585 !important;
       }
+      .cloak {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -31,6 +34,19 @@
         </div>
       </div>
       <div class="row">
+        <div class="column">
+          <button id="go-to-page-api-tx-tool">API/Tx Tool</button>
+          <button id="go-to-page-hashing-tool" style="margin-left: 6.4rem">
+            Hashing Tool
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <br />
+        </div>
+      </div>
+      <div class="row page-api-tx-tool cloak">
         <div class="column column-33">
           <form>
             <fieldset>
@@ -66,13 +82,70 @@
           </button>
         </div>
       </div>
-      <div class="row">
+      <div class="row page-api-tx-tool cloak">
         <div class="column">
           <label for="txhash">Transaction Hash</label>
           <input type="text" id="txhash" placeholder="0x....." readonly />
           <button id="check-txhash" class="float-right" disabled>
             Check on Blockchain Explorer
           </button>
+        </div>
+      </div>
+      <div class="row page-hashing-tool cloak">
+        <div class="column">
+          <form>
+            <fieldset>
+              <label for="hash-content">Original Content</label>
+              <input
+                style="font-family: monospace"
+                id="hash-content"
+                placeholder="Data to be de-identified"
+                type="text"
+              />
+              <label for="hash-salt">Salt</label>
+              <input
+                style="font-family: monospace"
+                id="hash-salt"
+                placeholder="(Optional)"
+                type="text"
+              />
+              <label for="hash-result"
+                >Keccak256 Hash (De-Identified Data)</label
+              >
+              <input
+                style="font-family: monospace"
+                id="hash-result"
+                placeholder="hash(original_content + hash(salt))"
+                type="text"
+                readonly
+              />
+              <label for="hash-result-20bytes">De-Identified Data Entry</label>
+              <input
+                style="font-family: monospace"
+                id="hash-result-20bytes"
+                placeholder="Wait for input"
+                type="text"
+                readonly
+              />
+            </fieldset>
+          </form>
+          <button class="float-right" id="hash-save">Save hash</button>
+        </div>
+      </div>
+      <div class="row page-hashing-tool cloak">
+        <div class="column">
+          <table>
+            <thead>
+              <tr>
+                <th>Content</th>
+                <th>Salt</th>
+                <th>Hash</th>
+                <th>De-Identified Data Entry</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="hash-table-body" style="font-family: monospace"></tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -82,6 +155,7 @@
     <script src="./lib/buffer.min.js"></script>
     <script src="./lib/jsonpath.min.js"></script>
     <script src="./lib/eth-key-lib-js-browser.js"></script>
-    <script src="./lib/workshop.v2.min.js"></script>
+    <script src="./lib/sha3.min.js"></script>
+    <script src="./lib/workshop.v2.js"></script>
   </body>
 </html>
