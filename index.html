@@ -47,6 +47,14 @@
         </div>
       </div>
       <div class="row page-api-tx-tool cloak">
+        <div class="column">
+          <p>
+            Please follow the instructions 1 - 5, the forms on the right part
+            will be automatically loaded.
+          </p>
+        </div>
+      </div>
+      <div class="row page-api-tx-tool cloak">
         <div class="column column-33">
           <form>
             <fieldset>
@@ -66,14 +74,14 @@
               />
               <label for="signin-pw">3. Sign-In Password</label>
               <input
-                type="text"
+                type="password"
                 style="font-family: monospace"
                 placeholder="Password"
                 id="signin-pw"
               />
               <label for="ethk-pp">4. EthereumKey Passphrase</label>
               <input
-                type="text"
+                type="password"
                 style="font-family: monospace"
                 placeholder="Passphrase"
                 id="ethk-pp"
@@ -84,7 +92,7 @@
               <textarea
                 type="text"
                 style="height: 21rem; font-family: monospace;"
-                placeholder="Please paste the graphql mutation here"
+                placeholder="Please paste the graphql mutation here. *(Mutation Request does not include /signin or /explorer)"
                 id="mutation-req"
               ></textarea>
             </fieldset>
